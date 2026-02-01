@@ -56,6 +56,34 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "일반전형",
       role: "부마스터",
       image: "images/river.png"
+    },
+     {
+      name: "료하",
+      birthday: "0601",
+      type: "아트전형",
+      role: "아트부원",
+      image: "images/ryuha.jpg"
+    },
+     {
+      name: "새싹고래",
+      birthday: "0705",
+      type: "아트전형",
+      role: "아트부원",
+      image: "images/whale.png"
+    },
+     {
+      name: "시서연",
+      birthday: "0209",
+      type: "아트전형",
+      role: "아트부원",
+      image: "images/youn.png"
+    },
+     {
+      name: "CH.Noa",
+      birthday: "06062",
+      type: "아트전형",
+      role: "아트부원",
+      image: "images/noa.png"
     }
     // 👉 여기 계속 추가
   ];
