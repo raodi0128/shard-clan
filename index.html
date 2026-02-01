@@ -48,8 +48,36 @@
 
 <section id="members">
   <h2>멤버</h2>
-  <div id="memberList"></div>
+
+  <!-- 필터 버튼 -->
+  <div class="member-controls">
+    <div class="filters">
+      <button data-filter="전체">전체</button>
+      <button data-filter="아트전형">아트전형</button>
+      <button data-filter="일반전형">일반전형</button>
+      <button data-filter="기부전형">기부전형</button>
+    </div>
+
+    <div class="sorts">
+      <button id="sortBirthday">생일 빠른순</button>
+      <button id="sortRole">직위순</button>
+    </div>
+  </div>
+
+  <!-- 멤버 헤더 -->
+  <div class="member-header">
+    <span>전형</span>
+    <span>이름</span>
+    <span>생일</span>
+    <span>직위</span>
+  </div>
+
+  <!-- 멤버 리스트 -->
+  <div id="memberList" class="member-list"></div>
+
+  <button id="loadMore" class="load-more">더 보기</button>
 </section>
+
 
 <div id="memberModal" class="modal">
   <div class="modal-content" id="modalContent"></div>
