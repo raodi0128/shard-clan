@@ -145,14 +145,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ========================= */
 function openMember(member) {
   let imagesHtml = "";
+  let imgs = [];
 
-  if (member.images && member.images.length > 0) {
-    member.images.forEach(function (img) {
-      imagesHtml += `<img src="${img}" class="profile-img">`;
-    });
-  } else {
-    imagesHtml = `<img src="images/default.png" class="profile-img">`;
+  if (Array.isArray(member.image)) {
+    imgs = member.image;
+  } else if (member.image) {
+    imgs = [member.image];
   }
+
+  imgs.forEach(function (img) {
+    imagesHtml += `<img src="${img}" class="profile-img">`;
+  });
 
   modalContent.innerHTML = `
     <h2>${member.name}</h2>
@@ -166,6 +169,7 @@ function openMember(member) {
 
   modal.style.display = "flex";
 }
+
 
 
   modal.onclick = function () {
