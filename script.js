@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
      {
       name: "CH.Noa",
-      birthday: "06062",
+      birthday: "0602",
       type: "아트전형",
       role: "아트부원",
       image: "images/noa.png"
