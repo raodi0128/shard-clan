@@ -232,6 +232,19 @@ section {
   margin-bottom: 10px;
 }
 
+.profile-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.profile-img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+
 /* =========================
    모바일 대응
 ========================= */

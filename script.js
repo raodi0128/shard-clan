@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       birthday: "0705",
       type: "아트전형",
       role: "아트부원",
-      image: "images/whale.png"
+      image: ["images/whale.png","images/whale2.png"]
     },
      {
       name: "시서연",
@@ -84,6 +84,20 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "아트전형",
       role: "아트부원",
       image: "images/noa.png"
+    },
+     {
+      name: "쇼뮹",
+      birthday: "0207",
+      type: "일반전형",
+      role: "클랜원",
+      image: "images/sho.jpg"
+    },
+     {
+      name: "버라",
+      birthday: "0117",
+      type: "일반전형",
+      role: "클랜원",
+      image: "images/bara.jpg"
     }
     // 👉 여기 계속 추가
   ];
@@ -129,16 +143,30 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =========================
      멤버 모달
   ========================= */
-  function openMember(member) {
-    modalContent.innerHTML = `
-      <h2>${member.name}</h2>
-      <img src="${member.image}">
-      <p>🎂 생일: ${member.birthday.slice(0,2)}-${member.birthday.slice(2)}</p>
-      <p>📌 전형: ${member.type}</p>
-      <p>👑 직위: ${member.role}</p>
-    `;
-    modal.style.display = "flex";
+function openMember(member) {
+  let imagesHtml = "";
+
+  if (member.images && member.images.length > 0) {
+    member.images.forEach(function (img) {
+      imagesHtml += `<img src="${img}" class="profile-img">`;
+    });
+  } else {
+    imagesHtml = `<img src="images/default.png" class="profile-img">`;
   }
+
+  modalContent.innerHTML = `
+    <h2>${member.name}</h2>
+    <div class="profile-images">
+      ${imagesHtml}
+    </div>
+    <p>🎂 생일: ${member.birthday.slice(0,2)}-${member.birthday.slice(2)}</p>
+    <p>📌 전형: ${member.type}</p>
+    <p>👑 직위: ${member.role}</p>
+  `;
+
+  modal.style.display = "flex";
+}
+
 
   modal.onclick = function () {
     modal.style.display = "none";
