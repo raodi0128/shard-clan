@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLAN NAME</title>
+  <title>SHARD CLAN</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,17 +26,19 @@
 
 <section id="about">
   <h2>클랜 소개</h2>
-  <p>우리는 함께 성장하는 클랜입니다.</p>
+  <p>샤드 클랜은 게임 실력보다는 사람을 먼저 보는 친목 위주의 클랜입니다. 
+    초보, 복귀, 고인물 모두 환영하며, 기본적인 매너와 소통을 가장 중요하게 생각합니다. 
+    새로 오신 분도 같이 웃고 떠들며 즐겁게 지내면 좋겠습니다.</p>
 </section>
 
 <section id="members">
   <h2>멤버</h2>
-  <div class="member-list">
-    <div class="member">리더</div>
-    <div class="member">서브</div>
-    <div class="member">멤버</div>
-  </div>
+  <div id="memberList"></div>
 </section>
+
+<div id="memberModal" class="modal">
+  <div class="modal-content" id="modalContent"></div>
+</div>
 
 <section id="notice">
   <h2>공지</h2>
@@ -48,7 +50,7 @@
 
 <section id="join">
   <h2>가입 방법</h2>
-  <p>디스코드로 문의 주세요!</p>
+  <p>샤드 클랜 가입&문의방로 문의 주세요!</p>
 </section>
 
 <script src="script.js"></script>
