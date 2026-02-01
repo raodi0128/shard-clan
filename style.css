@@ -1,54 +1,196 @@
+/* =========================
+   기본 설정
+========================= */
 body {
   margin: 0;
+  padding: 0;
   font-family: sans-serif;
   background: #0f172a;
   color: #e5e7eb;
-}
-
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background: #020617;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-  background: #020617;
-}
-
-nav a {
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 section {
   padding: 40px 20px;
 }
 
+/* =========================
+   상단 헤더
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 40px;
+  background-color: #020617;
+  position: relative;
+}
+
+/* 로고 */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* =========================
+   메뉴 (PC)
+========================= */
+.menu {
+  display: flex;
+}
+
+.menu a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   햄버거 버튼
+========================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* =========================
+   슬라이더 / 메인 이미지
+========================= */
+.slider {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-content img {
+  max-width: 100%;
+  max-height: 70vh;
+}
+
+.slide-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.slide-text h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.slide-text p {
+  margin-top: 10px;
+  color: #cbd5f5;
+}
+
+/* =========================
+   멤버 목록
+========================= */
 .member-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
-.member {
+.member,
+.member-card {
   background: #020617;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
-/* 📱 모바일 대응 */
+/* =========================
+   멤버 모달
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+/* =========================
+   모바일 대응 (햄버거 메뉴)
+========================= */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
+
+  /* 햄버거 표시 */
+  .hamburger {
+    display: flex;
   }
 
+  /* 메뉴 숨김 */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    background: #020617;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu a {
+    margin: 0;
+    padding: 15px 0;
+    border-top: 1px solid #1e293b;
+  }
+
+  /* 햄버거 클릭 시 */
+  .menu.active {
+    display: flex;
+  }
+
+  /* 멤버 모바일 */
   .member-list {
     grid-template-columns: 1fr;
   }
