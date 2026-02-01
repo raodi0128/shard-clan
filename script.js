@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let modal = document.getElementById("memberModal");
   let modalContent = document.getElementById("modalContent");
 
-  let visibleCount = 20;
+  let visibleCount = 5;
   let currentFilter = "전체";
 
   /* =========================
