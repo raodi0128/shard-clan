@@ -105,6 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "일반전형",
       role: "클랜원",
       image: "images/user.png"
+    },
+     {
+      name: "427ㄷ",
+      birthday: "0416",
+      type: "일반전형",
+      role: "클랜원",
+      image: "images/427.png"
     }
     // 👉 여기 계속 추가
   ];
