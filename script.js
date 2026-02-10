@@ -112,6 +112,13 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "일반전형",
       role: "클랜원",
       image: "images/427.png"
+    },
+     {
+      name: "망딩",
+      birthday: "0515",
+      type: "아트전형",
+      role: "아트부원",
+      image: "images/mang.png"
     }
     // 👉 여기 계속 추가
   ];
