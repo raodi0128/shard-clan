@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       birthday: "0416",
       type: "일반전형",
       role: "클랜원",
-      image: "images/427.png"
+      image: "images/427.jpg"
     },
      {
       name: "망딩",
