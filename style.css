@@ -234,9 +234,9 @@ section {
 
 .profile-images {
   display: flex;
-  justify-content: center;
   gap: 10px;
-  margin: 10px 0;
+  overflow-x: auto;
+  padding-bottom: 5px;
 }
 
 .profile-img {
@@ -244,6 +244,7 @@ section {
   height: 120px;
   object-fit: contain;
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
 
