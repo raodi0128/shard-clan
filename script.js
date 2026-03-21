@@ -119,6 +119,13 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "아트전형",
       role: "아트부원",
       image: "images/mang.png"
+    },
+     {
+      name: "하테",
+      birthday: "0223",
+      type: "일반전형",
+      role: "클랜원",
+      image: ["images/hate1.png","images/hate2.png"]
     }
     // 👉 여기 계속 추가
   ];
