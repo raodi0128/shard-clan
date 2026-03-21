@@ -123,9 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
      {
       name: "하테",
       birthday: "0223",
-      type: "일반전형",
+      type: "기부전형",
       role: "클랜원",
-      image: ["images/hate1.png","images/hate2.png"]
+      image: ["images/hate1.jpg","images/hate2.jpg"]
     }
     // 👉 여기 계속 추가
   ];
