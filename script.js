@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       birthday: "0223",
       type: "기부전형",
       role: "클랜원",
-      image: ["images/hate1.jpg","images/hate2.jpg"]
+      image: ["images/hate3.jpg"]
     }
     // 👉 여기 계속 추가
   ];
